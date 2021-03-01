@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <span>hello world</span>
+    <MarkdownDisplay />
   </div>
 </template>
 
 <script>
+import MarkdownDisplay from "./components/MarkdownDisplay";
 
 export default {
   name: 'App',
   components: {
+    MarkdownDisplay,
   }
 }
 </script>
