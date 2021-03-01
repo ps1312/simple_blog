@@ -1,5 +1,5 @@
 <template>
-  <div v-html="compiledMarkdown" />
+  <div v-html="compiledMarkdown" class="markdown-body" />
 </template>
 
 <script>
@@ -29,6 +29,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import "~highlight.js/styles/monokai-sublime.css";
+
+.markdown-body > p > img {
+  max-width: 90%;
+  max-height: 600px;
+  display: flex;
+  margin: auto;
+}
+
 </style>
