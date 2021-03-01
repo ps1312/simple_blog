@@ -4,7 +4,8 @@
 
 <script>
 import marked from "marked";
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/core";
+import jsHighlight from "highlight.js/lib/languages/javascript";
 
 export default {
   name: "MarkdownDisplay",
@@ -15,6 +16,7 @@ export default {
     }
   },
   mounted() {
+    hljs.registerLanguage("javascript", jsHighlight)
     hljs.highlightAll()
   },
   computed: {
