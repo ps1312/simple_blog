@@ -1,9 +1,15 @@
 <template>
-  <span>MarkdownDisplay.vue</span>
+  <span>{{ markdown }}</span>
 </template>
 
 <script>
 export default {
-  name: "MarkdownDisplay"
+  name: "MarkdownDisplay",
+  props: {
+    markdown: {
+      type: String,
+      required: true,
+    }
+  }
 }
 </script>

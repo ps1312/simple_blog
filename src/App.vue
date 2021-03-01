@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MarkdownDisplay />
+    <MarkdownDisplay :markdown="markdown" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'App',
   components: {
     MarkdownDisplay,
+  },
+  data() {
+    return {
+      markdown: "valid markdown string",
+    }
   }
 }
 </script>
