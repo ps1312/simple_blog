@@ -1,5 +1,10 @@
 <template>
-  <h1>{{ post.title }}</h1>
+  <div>
+    <h1>{{ post.title }}</h1>
+    <span>{{ post.readTimeEstimate }}</span>
+    <span>Published on Mar 01, 2021</span>
+    <span>{{ post.postContentSynopsys }}</span>
+  </div>
 </template>
 
 <script>
