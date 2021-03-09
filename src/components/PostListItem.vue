@@ -2,7 +2,7 @@
   <div>
     <h1>{{ post.title }}</h1>
     <span>{{ post.readTimeEstimate }}</span>
-    <span>Published on Mar 01, 2021</span>
+    <span>Published on {{ formattedDate }}</span>
     <span>{{ post.postContentSynopsys }}</span>
   </div>
 </template>
@@ -14,6 +14,12 @@ export default {
     post: {
       type: Object,
       required: true,
+    }
+  },
+  computed: {
+    formattedDate() {
+      const options = { day: "2-digit", month: "short", year: "numeric" };
+      return this.post.publishedAt.toLocaleDateString("en-US", options);
     }
   }
 }
