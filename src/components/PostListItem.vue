@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <a :href="'/post/' + post.id">
     <h1>{{ post.title }}</h1>
     <span>{{ post.readTimeEstimate }}</span>
     <span>Published on {{ formattedDate }}</span>
     <span>{{ post.postContentSynopsys }}</span>
-  </div>
+  </a>
 </template>
 
 <script>

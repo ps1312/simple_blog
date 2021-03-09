@@ -17,6 +17,20 @@ describe('PostListItem.vue', () => {
     await assertFormattedDate({ newDate: new Date("Jun 30 2020"), expectedDate: "Jun 30, 2020" });
     await assertFormattedDate({ newDate: new Date("Feb 15 2005"), expectedDate: "Feb 15, 2005" });
   });
+
+  it("should render an anchor tag with href set correctly by post.id", async () => {
+    const post = makePost();
+    const wrapper = createComponent(post);
+
+    expect(wrapper.find("a").attributes().href).toEqual(`/post/${post.id}`);
+
+    await wrapper.setProps({ post: { ...post, id: 2 } });
+
+    expect(wrapper.find("a").attributes().href).toEqual(`/post/${2}`);
+
+    await wrapper.setProps({ post: { ...post, id: 999 } });
+    expect(wrapper.find("a").attributes().href).toEqual(`/post/${999}`);
+  });
 });
 
 async function assertFormattedDate({ newDate, expectedDate }) {
