@@ -19,19 +19,19 @@ describe('PostListItem.vue', () => {
   });
 
   it("should render an anchor tag with href set correctly by post.id", async () => {
-    const post = makePost();
-    const wrapper = createComponent(post);
-
-    expect(wrapper.find("a").attributes().href).toEqual(`/post/${post.id}`);
-
-    await wrapper.setProps({ post: { ...post, id: 2 } });
-
-    expect(wrapper.find("a").attributes().href).toEqual(`/post/${2}`);
-
-    await wrapper.setProps({ post: { ...post, id: 999 } });
-    expect(wrapper.find("a").attributes().href).toEqual(`/post/${999}`);
+    await assertLinkUrl({ id: 1, expectedUrl: "/post/1"});
+    await assertLinkUrl({ id: 5, expectedUrl: "/post/5"});
+    await assertLinkUrl({ id: 999, expectedUrl: "/post/999"});
   });
 });
+
+async function assertLinkUrl({ id, expectedUrl }) {
+  const post = makePost();
+  const wrapper = createComponent(post);
+
+  await wrapper.setProps({ post: { ...post, id } });
+  expect(wrapper.find("a").attributes().href).toEqual(expectedUrl);
+}
 
 async function assertFormattedDate({ newDate, expectedDate }) {
   const post = makePost();
