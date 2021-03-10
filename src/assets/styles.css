@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
-
 * {
-  font-family: 'Work Sans', sans-serif;
-
   /* colors */
   --main-bg-color: #F1F1F1;
   --main-font-color: #2f2e41;
