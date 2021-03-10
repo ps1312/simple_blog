@@ -1,14 +1,17 @@
 <template>
-  <li>
-    <router-link :to="'/posts/' + post.id">
-      <strong class="">{{ post.title }}</strong>
+  <li class="p-4 mb-8 rounded-md list-none">
+    <router-link class="flex flex-col" :to="'/posts/' + post.id">
 
-      <div class="">
+      <strong class="text-2xl leading-none text-gray-800">{{ post.title }}</strong>
+
+      <div class="flex justify-between text-sm text-gray-400 my-1">
         <span>Published on {{ formattedDate }}</span>
         <span>{{ post.readTimeEstimate }}</span>
       </div>
 
-      <span class="">{{ post.postContentSynopsys }}</span>
+      <span class="my-2">{{ post.postContentSynopsys }}</span>
+
+      <span class="my-4 text-indigo-600">Read more...</span>
     </router-link>
   </li>
 </template>

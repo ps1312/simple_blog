@@ -1,6 +1,8 @@
 <template>
-  <div id="app" class="w-screen h-screen bg-gray-100">
-    <router-view />
+  <div id="app" class="w-screen h-screen antialiase">
+    <main class="container mx-auto max-w-2xl px-8">
+      <router-view />
+    </main>
   </div>
 </template>
 
@@ -9,7 +11,3 @@ export default {
   name: "App",
 }
 </script>
-
-<style scoped>
-@import "assets/styles.css";
-</style>
