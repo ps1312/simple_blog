@@ -1,22 +1,25 @@
 <template>
   <div id="app">
-    <MarkdownDisplay :markdown="markdown" />
+    <router-view class="page-view" />
   </div>
 </template>
 
 <script>
-import MarkdownDisplay from "./components/MarkdownDisplay";
-import markdown from "./data";
-
 export default {
-  name: 'App',
-  components: {
-    MarkdownDisplay,
-  },
-  data() {
-    return {
-      markdown,
-    }
-  }
+  name: "App",
 }
 </script>
+
+<style scoped>
+@import "assets/styles.css";
+
+#app {
+  display: flex;
+  justify-content: center;
+  margin: 0 64px;
+}
+.page-view {
+  margin-top: 30px;
+  max-width: 70%;
+}
+</style>
