@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view class="page-view" />
+  <div id="app" class="w-screen h-screen bg-gray-100">
+    <router-view />
   </div>
 </template>
 
@@ -12,14 +12,4 @@ export default {
 
 <style scoped>
 @import "assets/styles.css";
-
-#app {
-  display: flex;
-  justify-content: center;
-  margin: 0 64px;
-}
-.page-view {
-  margin-top: 30px;
-  max-width: 70%;
-}
 </style>
