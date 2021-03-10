@@ -1,10 +1,10 @@
 <template>
-  <a :href="'/post/' + post.id">
+  <router-link :to="'/post/' + post.id">
     <h1>{{ post.title }}</h1>
     <span>{{ post.readTimeEstimate }}</span>
     <span>Published on {{ formattedDate }}</span>
     <span>{{ post.postContentSynopsys }}</span>
-  </a>
+  </router-link>
 </template>
 
 <script>

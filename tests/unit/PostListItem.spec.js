@@ -19,18 +19,18 @@ describe('PostListItem.vue', () => {
   });
 
   it("should render an anchor tag with href set correctly by post.id", async () => {
-    await assertLinkUrl({ id: 1, expectedUrl: "/post/1"});
-    await assertLinkUrl({ id: 5, expectedUrl: "/post/5"});
-    await assertLinkUrl({ id: 999, expectedUrl: "/post/999"});
+    await assertLinkUrl({ id: 1 });
+    await assertLinkUrl({ id: 5 });
+    await assertLinkUrl({ id: 999 });
   });
 });
 
-async function assertLinkUrl({ id, expectedUrl }) {
+async function assertLinkUrl({ id }) {
   const post = makePost();
   const wrapper = createComponent(post);
 
   await wrapper.setProps({ post: { ...post, id } });
-  expect(wrapper.find("a").attributes().href).toEqual(expectedUrl);
+  expect(wrapper.find(`[to="/posts/${id}"]`)).toBeTruthy();
 }
 
 async function assertFormattedDate({ newDate, expectedDate }) {
@@ -54,5 +54,6 @@ function makePost() {
 function createComponent(post) {
   return shallowMount(PostListItem, {
     propsData: { post },
+    stubs: ['router-link'],
   });
 }
