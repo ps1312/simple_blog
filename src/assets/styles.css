@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Work Sans', sans-serif;
+
+  /* colors */
+  --main-bg-color: #F1F1F1;
+  --main-font-color: #2f2e41;
+  --light-font-color: #70757A;
+
+  /* font sizes */
+  --title-font-size: 1.875em;
+  --subtitle-font-size: .875em;
+  --body-font-size: 1em;
+}
