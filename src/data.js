@@ -18,4 +18,15 @@ Vue:
 - [Coding For Speed](https://codingforspeed.com)
 `
 
-export default start + codeBlock + end;
+function makePost({ id }) {
+  return {
+    id,
+    title: "Test driving a list component in Vue.js.",
+    readTimeEstimate: "4 minutes read.",
+    publishedAt: new Date("Mar 01 2021"),
+    postContentSynopsys: "How to test drive a list component",
+  }
+}
+
+export const markdown = start + codeBlock + end;
+export const posts = [makePost({ id: 1 }), makePost({ id: 2 })];
