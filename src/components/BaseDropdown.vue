@@ -1,6 +1,5 @@
 <template>
-  <div @click="toggleVisible()">
-
+  <button class="text-left" @click="toggleVisible()">
     <base-icon v-if="!visible" class="w-8 h-8 fill-current text-gray-200" icon="hamburguer" />
 
     <base-icon v-else class="w-8 h-8 fill-current text-gray-200" icon="close" />
@@ -31,7 +30,9 @@
       </div>
     </div>
 
-  </div>
+    <div v-if="visible" class="opacity-30 fixed w-screen h-screen top-0 mt-16 left-0 bg-gray-600 -z-10" />
+
+  </button>
 </template>
 
 <script>
@@ -43,7 +44,7 @@ export default {
   name: "BaseDropdown",
   data() {
     return {
-      visible: true,
+      visible: false,
     }
   },
   methods: {

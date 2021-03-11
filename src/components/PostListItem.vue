@@ -1,12 +1,12 @@
 <template>
-  <li class="p-4 mb-8 rounded-md list-none">
+  <li class="p-4 mb-4 rounded-md list-none">
     <div class="flex flex-col">
 
       <strong class="text-2xl leading-none text-gray-800">{{ post.title }}</strong>
 
       <div class="flex justify-between text-sm text-gray-400 my-1">
         <span>Published on {{ formattedDate }}</span>
-        <span>{{ post.readTimeEstimate }}</span>
+        <span class="pl-2">{{ post.readTimeEstimate }}</span>
       </div>
 
       <span class="my-2">{{ post.postContentSynopsys }}</span>
