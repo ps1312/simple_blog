@@ -43,7 +43,7 @@ export default {
   name: "BaseDropdown",
   data() {
     return {
-      visible: true,
+      visible: false,
     }
   },
   methods: {
