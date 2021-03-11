@@ -1,6 +1,6 @@
 <template>
   <li class="p-4 mb-8 rounded-md list-none">
-    <router-link class="flex flex-col" :to="'/posts/' + post.id">
+    <div class="flex flex-col">
 
       <strong class="text-2xl leading-none text-gray-800">{{ post.title }}</strong>
 
@@ -11,8 +11,8 @@
 
       <span class="my-2">{{ post.postContentSynopsys }}</span>
 
-      <span class="my-4 text-indigo-600">Read more...</span>
-    </router-link>
+      <router-link :to="'/posts/' + post.id" class="my-4 text-indigo-600">Read more...</router-link>
+    </div>
   </li>
 </template>
 
