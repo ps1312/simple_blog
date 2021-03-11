@@ -8,21 +8,21 @@
       <div class="w-screen bg-indigo-500 mt-4 px-2 py-2">
         <router-link
           to="/"
-          class="block p-2 rounded text-white font-semibold hover:bg-indigo-400"
+          class="text-lg block p-2 rounded text-white font-semibold hover:bg-indigo-400"
         >
           All posts
         </router-link>
 
         <router-link
           to="/about"
-          class="block p-2 rounded text-white font-semibold hover:bg-indigo-400"
+          class="text-lg block p-2 rounded text-white font-semibold hover:bg-indigo-400"
         >
           About
         </router-link>
 
         <a
           download="curriculo_pssr.pdf" href="/curriculo_pssr.pdf"
-          class="block p-2 rounded text-white font-semibold hover:bg-indigo-400"
+          class="text-lg block p-2 rounded text-white font-semibold hover:bg-indigo-400"
         >
           Resume
         </a>
