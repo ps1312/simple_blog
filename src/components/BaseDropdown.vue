@@ -20,6 +20,13 @@
           About
         </router-link>
 
+        <a
+          download="curriculo_pssr.pdf" href="/curriculo_pssr.pdf"
+          class="block p-2 rounded text-white font-semibold hover:bg-indigo-400"
+        >
+          Resume
+        </a>
+
         <a target="_blank" rel="noopener noreferrer" href="https:www.github.com/ps1312">
           <base-icon class="w-8 h-8 mx-1 my-2 fill-current text-white rounded hover:bg-indigo-400" icon="github" />
          </a>

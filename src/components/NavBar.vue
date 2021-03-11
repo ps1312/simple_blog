@@ -13,6 +13,12 @@
         <div class="inline-flex flex-grow">
             <router-link class="text-lg font-semibold ml-8 text-white font-semibold rounded px-2 hover:bg-indigo-400" to="/">All posts</router-link>
             <router-link class="text-lg font-semibold ml-8 text-white font-semibold rounded px-2 hover:bg-indigo-400" to="/about">About</router-link>
+            <a
+              download="curriculo_pssr.pdf" href="/curriculo_pssr.pdf"
+              class="text-lg font-semibold ml-8 text-white font-semibold rounded px-2 hover:bg-indigo-400"
+            >
+              Resume
+            </a>
         </div>
         <div class="inline-flex">
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/pssr">
