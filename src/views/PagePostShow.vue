@@ -1,5 +1,7 @@
 <template>
-  <markdown-display :markdown="markdown" />
+  <div class="my-10">
+    <markdown-display :markdown="markdown" />
+  </div>
 </template>
 
 <script>

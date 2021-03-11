@@ -3,7 +3,7 @@ const start = `
 
 ### First you'll need a component to display markdown 📄
 
-Here is an example of some code
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet risus ut enim blandit finibus **non non magna**. Aenean finibus sem sollicitudin vestibulum mollis. Nullam at aliquet dolor. Phasellus blandit suscipit orci a vestibulum. Donec aliquet sollicitudin elementum. Cras in lorem consectetur, finibus justo in, ultrices eros. Aliquam sed velit sit amet mauris pulvinar maximus. Mauris aliquam **et metus vitae sodales**.
 `
 
 const codeBlock = " ```javascript\nfunction print(string) {\nconsole.log(string)\n}\nprint('test')\n``` "
@@ -13,7 +13,8 @@ const end = `
 ![Image placeholder](https://via.placeholder.com/700x300)
 
 ### And some lists and links
-Vue: 
+
+Fusce sit amet risus ut enim blandit finibus **non non magna**. Aenean finibus sem sollicitudin vestibulum mollis: 
 - [Vue.js official documentation](https://helloacm.com)
 - [Coding For Speed](https://codingforspeed.com)
 `

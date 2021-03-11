@@ -1,5 +1,7 @@
 <template>
-  <post-list :posts="posts" />
+  <div class="mt-10">
+    <post-list :posts="posts" />
+  </div>
 </template>
 
 <script>
