@@ -38,7 +38,7 @@ export default {
 }
 
 .markdown-body {
-  @apply text-gray-800 text-justify text-lg
+  @apply text-gray-800 text-lg
 }
 
 .markdown-body strong {
@@ -62,7 +62,7 @@ export default {
 }
 
 .markdown-body ul {
-  @apply list-disc ml-16 mt-6
+  @apply list-disc ml-6 mt-6 sm:ml-16
 }
 
 </style>
