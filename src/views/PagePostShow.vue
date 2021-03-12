@@ -6,7 +6,7 @@
 
 <script>
 import MarkdownDisplay from '@/components/MarkdownDisplay';
-import { markdown } from "@/data";
+import markdown from "@/assets/post1.md";
 
 export default {
   name: "PagePostShow",

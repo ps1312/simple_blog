@@ -6,6 +6,7 @@
 import marked from "marked";
 import hljs from "highlight.js/lib/core";
 import jsHighlight from "highlight.js/lib/languages/javascript";
+import mdHighlight from "highlight.js/lib/languages/markdown";
 
 export default {
   name: "MarkdownDisplay",
@@ -17,6 +18,8 @@ export default {
   },
   mounted() {
     hljs.registerLanguage("javascript", jsHighlight)
+    hljs.registerLanguage("markdown", mdHighlight)
+
     hljs.highlightAll()
   },
   computed: {
@@ -32,21 +35,30 @@ export default {
 
 .markdown-body > p > img {
   max-width: 90%;
-  max-height: 600px;
+  max-height: 400px;
   display: flex;
   margin: auto;
 }
 
 .markdown-body {
-  @apply text-gray-800 text-lg
+  @apply text-gray-700 text-lg leading-loose
 }
 
 .markdown-body strong {
   @apply text-indigo-600
 }
 
+
 .markdown-body h1 {
-  @apply font-bold text-4xl mt-6
+  @apply font-bold text-4xl mt-12 text-gray-800
+}
+
+.markdown-body h1 > strong {
+  @apply font-bold text-4xl mt-8 text-gray-800
+}
+
+.markdown-body > h2 {
+  @apply text-gray-500
 }
 
 .markdown-body h3 {
@@ -54,11 +66,15 @@ export default {
 }
 
 .markdown-body p {
-  @apply leading-tight mt-6
+  @apply leading-9 mt-6
 }
 
-.markdown-body code {
-  @apply mt-8 p-4 rounded-lg shadow-xl text-sm;
+.markdown-body > p > code {
+  @apply bg-gray-200 text-sm px-2 py-1 rounded-sm
+}
+
+.markdown-body .hljs {
+  @apply text-sm p-8 my-8 rounded-md
 }
 
 .markdown-body ul {
@@ -66,7 +82,15 @@ export default {
 }
 
 .markdown-body a {
-  @apply underline
+  @apply border-b-2 border-indigo-600 break-words text-indigo-600
+}
+
+.markdown-body > ol {
+  @apply list-decimal ml-4 mt-4 pr-8 sm:ml-16
+}
+
+.markdown-body > ol > li > code {
+  @apply bg-gray-200 text-sm px-2 py-1 rounded-sm
 }
 
 </style>
