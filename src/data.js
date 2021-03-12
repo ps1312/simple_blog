@@ -36,4 +36,4 @@ const post2 = {
 }
 
 export const markdown = start + codeBlock + end;
-export const posts = [post1, post2];
+export const posts = [post2, post1];
