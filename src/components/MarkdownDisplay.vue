@@ -41,6 +41,7 @@ export default {
   max-height: 500px;
   display: flex;
   margin: auto;
+  border-radius: 5px;
 }
 
 .markdown-body {
@@ -81,6 +82,10 @@ export default {
 
 .markdown-body ul {
   @apply list-disc ml-6 mt-6 sm:ml-16
+}
+
+.markdown-body > ul > li > code {
+  @apply bg-gray-200 text-sm px-2 py-1 rounded-sm
 }
 
 .markdown-body a {
