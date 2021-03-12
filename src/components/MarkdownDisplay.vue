@@ -7,6 +7,8 @@ import marked from "marked";
 import hljs from "highlight.js/lib/core";
 import jsHighlight from "highlight.js/lib/languages/javascript";
 import mdHighlight from "highlight.js/lib/languages/markdown";
+import xmlHighlight from "highlight.js/lib/languages/xml";
+import cssHighlight from "highlight.js/lib/languages/css";
 
 export default {
   name: "MarkdownDisplay",
@@ -17,10 +19,11 @@ export default {
     }
   },
   mounted() {
-    hljs.registerLanguage("javascript", jsHighlight)
-    hljs.registerLanguage("markdown", mdHighlight)
-
-    hljs.highlightAll()
+    hljs.registerLanguage("javascript", jsHighlight);
+    hljs.registerLanguage("markdown", mdHighlight);
+    hljs.registerLanguage("xml", xmlHighlight);
+    hljs.registerLanguage("css", cssHighlight);
+    hljs.highlightAll();
   },
   computed: {
     compiledMarkdown() {
@@ -35,7 +38,7 @@ export default {
 
 .markdown-body > p > img {
   max-width: 90%;
-  max-height: 400px;
+  max-height: 500px;
   display: flex;
   margin: auto;
 }
@@ -47,7 +50,6 @@ export default {
 .markdown-body strong {
   @apply text-indigo-600
 }
-
 
 .markdown-body h1 {
   @apply font-bold text-4xl mt-12 text-gray-800
