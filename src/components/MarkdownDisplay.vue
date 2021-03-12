@@ -53,7 +53,7 @@ export default {
 }
 
 .markdown-body h1 {
-  @apply font-bold text-4xl mt-12 text-gray-800
+  @apply font-bold text-4xl mt-8 text-gray-800
 }
 
 .markdown-body h1 > strong {
@@ -61,7 +61,7 @@ export default {
 }
 
 .markdown-body > h2 {
-  @apply text-gray-500
+  @apply text-gray-500 text-base
 }
 
 .markdown-body h3 {
@@ -98,6 +98,10 @@ export default {
 
 .markdown-body > ol > li > code {
   @apply bg-gray-200 text-sm px-2 py-1 rounded-sm
+}
+
+.markdown-body hr {
+  @apply border-t-4 mt-8
 }
 
 </style>
